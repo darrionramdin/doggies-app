@@ -1,0 +1,11 @@
+.SavedDogImage {
+    width: 250px;
+    height: 250px;
+    margin: 10px 0;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.SavedDogImage__image {
+    height: 100%;
+}

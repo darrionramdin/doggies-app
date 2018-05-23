@@ -1,0 +1,10 @@
+.DogImage {
+    width: 250px;
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+}
+
+.DogImage-image {
+    height: 100%;
+}

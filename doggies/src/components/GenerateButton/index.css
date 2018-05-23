@@ -1,0 +1,18 @@
+.GenerateButton {
+    margin: 20px 0;
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 600;
+    background: #FF7100;
+    box-shadow: 0px 2px 10px rgba(0,0,0,0.22);
+    border-radius: 2px;
+    border: 0;
+    padding: 10px 25px;
+    letter-spacing: 0.03rem;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.GenerateButton:hover {
+    background: rgba(255, 115, 0, 0.904);
+}

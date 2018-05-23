@@ -1,0 +1,9 @@
+.Header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Header-logo {
+    width: 100px;
+}
