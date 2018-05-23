@@ -4,7 +4,7 @@ import './index.css';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import getDog from '../../services/actions';
+import {getDog, saveDog} from '../../services/actions';
 
 import DogImage from '../../components/DogImage';
 import GenerateButton from '../../components/GenerateButton';
@@ -18,10 +18,17 @@ class Generator extends Component {
         this.props.getDog();
     }
 
+    saveDog = (image) => {
+        this.props.saveDog(image);
+    }
+
     render() {
         return (
             <div className="Generator">
-                <DogImage image={this.props.dog} />
+                <DogImage 
+                image={this.props.dog}
+                onSaveButtonClick={this.saveDog} 
+                />
                 <GenerateButton 
                 onGenerateDog={this.generateDog} />
             </div>
@@ -40,7 +47,8 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
     return bindActionCreators({
-        getDog
+        getDog,
+        saveDog
     }, dispatch)
 }
 

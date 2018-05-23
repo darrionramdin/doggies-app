@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-export default function getDog(){
+export function getDog(){
     return dispatch => {
         axios.get('https://dog.ceo/api/breeds/image/random')
             .then(res => {
@@ -14,5 +14,12 @@ function getDogAsync(dog) {
     return {
         type: 'GET_DOG',
         payload: dog
+    }
+}
+
+export function saveDog(dogImage){
+    return {
+        type: 'SAVE_DOG',
+        payload: dogImage
     }
 }

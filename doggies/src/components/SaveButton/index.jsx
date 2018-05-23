@@ -2,9 +2,9 @@ import React from 'react';
 import './index.css';
 import saveIcon from './assets/save.png';
 
-const SaveButton = () => {
+const SaveButton = ({onSaveButtonClick}) => {
     return (
-        <button className="SaveButton">
+        <button onClick={onSaveButtonClick} className="SaveButton">
             <img src={saveIcon} className="SaveButton__icon" alt="Save" />
         </button>
     )

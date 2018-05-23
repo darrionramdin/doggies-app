@@ -3,11 +3,11 @@ import './index.css';
 
 import SaveButton from '../SaveButton';
 
-const DogImage = ({image}) => {
+const DogImage = ({image, onSaveButtonClick}) => {
     return (
         <div className="DogImage">
             <img src={image} className="DogImage-image" alt="Dog" />
-            <SaveButton />
+            <SaveButton onSaveButtonClick={() => onSaveButtonClick(image)} />
         </div>
     )
 }

@@ -1,16 +1,32 @@
 import React, { Component } from 'react';
 import './index.css';
 
+import { connect } from 'react-redux';
+
 import SavedDogImage from '../../components/SavedDogImage';
 
 class SavedDogs extends Component {
     render() { 
+        let savedDogsList = this.props.savedDogs.map(dog => {
+            return (
+                <SavedDogImage 
+                id={dog.id} 
+                key={dog.id} 
+                image={dog.dogImage} />
+            )
+        }) 
         return ( 
             <div className="SavedDogs">
-                <SavedDogImage image="https://images.pexels.com/photos/879788/pexels-photo-879788.jpeg" />
+                {savedDogsList}
             </div>
          )
     }
 }
+
+function mapStateToProps(state){
+    return {
+        savedDogs: state.savedDogs
+    }
+}
  
-export default SavedDogs;
+export default connect(mapStateToProps, null)(SavedDogs);
